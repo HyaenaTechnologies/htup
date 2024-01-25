@@ -17,6 +17,6 @@ func FlagValidation() {
 		log.Fatal(goCommandError)
 	}
 	if len(os.Args) < 2 {
-		log.Fatal("Command Required, Help: --help")
+		log.Fatal("Command Required: htwork <Workflow> --help")
 	}
 }
