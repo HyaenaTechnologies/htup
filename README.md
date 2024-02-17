@@ -1,3 +1,4 @@
+[Bazel]:https://bazel.build/reference
 [Fleet]: https://jetbrains.com/fleet/
 [Go]: https://go.dev/
 [GoLandIDE]: https://jetbrains.com/go/
@@ -17,6 +18,7 @@ Local Workflow is an Open Source Local Workflow Tool
 
 ## Build
 
+- [Bazel Build][Bazel]
 - [Go Language][Go]
 - [GoLand][GoLandIDE]
 - [JetBrains Fleet][Fleet] 
