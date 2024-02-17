@@ -1,0 +1,53 @@
+go_binary(
+    goarch = amd64
+    goos = darwin 
+    name = "darwin_amd64",
+    out = "bin/darwin/amd64/lwrk",
+    pure = "on",
+    srcs = ["lib/main.go"],
+)
+
+go_binary(
+    goarch = arm64
+    goos = darwin 
+    name = "darwin_arm64",
+    out = "bin/darwin/arm64/lwrk",
+    pure = "on",
+    srcs = ["lib/main.go"],
+)
+
+go_binary(
+    goarch = amd64
+    goos = linux 
+    name = "linux_amd64",
+    out = "bin/linux/amd64/lwrk",
+    pure = "on",
+    srcs = ["lib/main.go"],
+)
+
+go_binary(
+    goarch = arm64
+    goos = linux 
+    name = "linux_arm64",
+    out = "bin/linux/arm64/lwrk",
+    pure = "on",
+    srcs = ["lib/main.go"],
+)
+
+go_binary(
+    goarch = amd64
+    goos = windows 
+    name = "windows_amd64",
+    out = "bin/windows/amd64/lwrk",
+    pure = "on",
+    srcs = ["lib/main.go"],
+)
+
+go_binary(
+    goarch = arm64
+    goos = windows 
+    name = "windows_arm64",
+    out = "bin/windows/arm64/lwrk",
+    pure = "on",
+    srcs = ["lib/main.go"],
+)

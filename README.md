@@ -28,6 +28,14 @@ git clone
 go build
 ```
 
+OR
+
+```shell
+git clone 
+
+bazel build
+```
+
 ## Install
 
 ```shell
