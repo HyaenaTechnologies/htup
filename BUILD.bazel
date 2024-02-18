@@ -1,8 +1,3 @@
-load(
-    "@io_bazel_rules_go//go:def.bzl", 
-    "go_binary",
-)
-
 go_binary(
     goarch = amd64
     goos = darwin 
@@ -55,4 +50,9 @@ go_binary(
     out = "bin/windows/arm64/htwork_windows_arm64",
     pure = "on",
     srcs = ["lib/main.go"],
+)
+
+load(
+    "@io_bazel_rules_go//go:def.bzl", 
+    "go_binary",
 )
