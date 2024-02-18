@@ -1,6 +1,19 @@
 {
     "configurations": [
         {
+            "name": "Run Bash",
+            "program": "usr/bin/bash",
+            "type": "command"
+        },
+        {
+            "args": [
+                "build"
+            ],
+            "name": "Bazel Build",
+            "program": "usr/bin/koltin/bazel_build/bazel",
+            "type": "command"
+        },
+        {
             "type": "go",
             "name": "local_workflow",
             "goExecPath": "/usr/bin/go/bin/go",
