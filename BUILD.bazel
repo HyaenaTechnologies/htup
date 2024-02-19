@@ -1,3 +1,5 @@
+gazelle(name = "local_workflow")
+
 go_binary(
     goarch = amd64
     goos = darwin 
@@ -50,6 +52,11 @@ go_binary(
     out = "bin/windows/arm64/htwork_windows_arm64",
     pure = "on",
     srcs = ["lib/main.go"],
+)
+
+load(
+    "@bazel_gazelle//:def.bzl", 
+    "gazelle",
 )
 
 load(

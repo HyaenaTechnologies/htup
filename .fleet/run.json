@@ -14,12 +14,12 @@
             "type": "command"
         },
         {
-            "type": "go",
-            "name": "local_workflow",
-            "goExecPath": "/usr/bin/go/bin/go",
             "buildParams": [
                 "$USER_HOME$/FleetProjects/local_workflow/lib/main.go"
-            ]
+            ],
+            "goExecPath": "/usr/bin/go/bin/go",
+            "name": "local_workflow",
+            "type": "go"
         }
     ]
 }

@@ -1,5 +1,40 @@
+gazelle_dependencies(go_repository_default_config = "//:WORKSPACE.bazel")
 go_register_toolchains(version = "1.22.0")
+
+gazelle(
+    command = "update-repos",
+    args = [
+        "-from_file=go.mod",
+        "-prune",
+        "-to_macro=deps.bzl%go_dependencies",
+    ],
+    name = "gazelle-update-repos",
+)
+
+go_repository(
+    importpath = "github.com/hashicorp/hcl/v2",
+    name = "hcl",
+    sum = "h1://i05Jqznmb2EXqa39Nsvyan2o5XyMowW5fnCKW5RPI=",
+    version = "v2.19.1",
+)
+
+go_repository(
+    importpath = "github.com/hashicorp/hil",
+    name = "hil",
+    sum = "h1:d9WqEcJ4DUpwMG4aOGKefF3GdJIb4vMd+EG6U+Uu6Kw=",
+    version = "v0.0.0-20231024160542-43d11d37940c",
+)
+
 go_rules_dependencies()
+
+http_archive(
+    name = "bazel_gazelle",
+    integrity = "sha256-MpOL2hbmcABjA1R5Bj2dJMYO2o15/Uc5Vj9Q0zHLMgk=",
+    urls = [
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-gazelle/releases/download/v0.35.0/bazel-gazelle-v0.35.0.tar.gz",
+        "https://github.com/bazelbuild/bazel-gazelle/releases/download/v0.35.0/bazel-gazelle-v0.35.0.tar.gz",
+    ],
+)
 
 http_archive(
     name = "io_bazel_rules_go",
@@ -8,6 +43,12 @@ http_archive(
         "https://mirror.bazel.build/github.com/bazelbuild/rules_go/releases/download/v0.44.2/rules_go-v0.44.2.zip",
         "https://github.com/bazelbuild/rules_go/releases/download/v0.44.2/rules_go-v0.44.2.zip",
     ],
+)
+
+load(
+    "@bazel_gazelle//:deps.bzl", 
+    "gazelle_dependencies",
+    "go_repository",
 )
 
 load(
