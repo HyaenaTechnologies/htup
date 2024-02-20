@@ -1,3 +1,13 @@
+load(
+    "@bazel_gazelle//:def.bzl", 
+    "gazelle",
+)
+
+load(
+    "@io_bazel_rules_go//go:def.bzl", 
+    "go_binary",
+)
+
 gazelle(name = "local_workflow")
 
 go_binary(
@@ -52,14 +62,4 @@ go_binary(
     out = "bin/windows/arm64/htwork_windows_arm64",
     pure = "on",
     srcs = ["lib/main.go"],
-)
-
-load(
-    "@bazel_gazelle//:def.bzl", 
-    "gazelle",
-)
-
-load(
-    "@io_bazel_rules_go//go:def.bzl", 
-    "go_binary",
 )

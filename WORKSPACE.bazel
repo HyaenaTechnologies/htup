@@ -1,13 +1,30 @@
+load(
+    "@bazel_gazelle//:deps.bzl", 
+    "gazelle_dependencies",
+    "go_repository",
+)
+
+load(
+    "@bazel_tools//tools/build_defs/repo:http.bzl", 
+    "http_archive",
+)
+
+load(
+    "@io_bazel_rules_go//go:deps.bzl", 
+    "go_register_toolchains", 
+    "go_rules_dependencies",
+)
+
 gazelle_dependencies(go_repository_default_config = "//:WORKSPACE.bazel")
 go_register_toolchains(version = "1.22.0")
 
 gazelle(
-    command = "update-repos",
     args = [
         "-from_file=go.mod",
         "-prune",
         "-to_macro=deps.bzl%go_dependencies",
     ],
+    command = "update-repos",
     name = "gazelle-update-repos",
 )
 
@@ -43,21 +60,4 @@ http_archive(
         "https://mirror.bazel.build/github.com/bazelbuild/rules_go/releases/download/v0.44.2/rules_go-v0.44.2.zip",
         "https://github.com/bazelbuild/rules_go/releases/download/v0.44.2/rules_go-v0.44.2.zip",
     ],
-)
-
-load(
-    "@bazel_gazelle//:deps.bzl", 
-    "gazelle_dependencies",
-    "go_repository",
-)
-
-load(
-    "@bazel_tools//tools/build_defs/repo:http.bzl", 
-    "http_archive",
-)
-
-load(
-    "@io_bazel_rules_go//go:deps.bzl", 
-    "go_register_toolchains", 
-    "go_rules_dependencies",
 )
