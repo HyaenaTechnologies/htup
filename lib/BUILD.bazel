@@ -7,7 +7,7 @@ go_library(
     name = "lib",
     srcs = [
         "*.go",
-        "command/*.go",
+        "src/command/*.go",
     ],
     importpath = "local_workflow/lib",
     visibility = ["//visibility:public"],
