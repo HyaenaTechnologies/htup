@@ -1,13 +1,7 @@
 load(
-    "@bazel_gazelle//:def.bzl", 
-    "gazelle",
-)
-load(
     "@io_bazel_rules_go//go:def.bzl", 
     "go_binary",
 )
-
-gazelle(name = "local_workflow")
 
 go_binary(
     goarch = amd64

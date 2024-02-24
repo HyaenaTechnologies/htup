@@ -1,8 +1,5 @@
 "Bazel Dependencies"
 load(
-    "@bazel_gazelle//:deps.bzl",
-)
-load(
     "@gazelle//:def.bzl", 
     "gazelle",
 )
