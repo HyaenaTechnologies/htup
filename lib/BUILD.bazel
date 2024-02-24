@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "lib",
+    srcs = [
+        "*.go",
+        "command/*.go",
+    ],
+    importpath = "local_workflow/lib",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_hashicorp_hcl_v2",
+        "@com_github_hashicorp_hil",
+    ],
+)
