@@ -9,7 +9,7 @@ go_library(
         "@com_github_hashicorp_hil",
     ],
     importpath = "local_workflow/lib",
-    name = "lib",
+    name = "local_workflow_lib",
     srcs = [
         "*.go",
         "src/**",
