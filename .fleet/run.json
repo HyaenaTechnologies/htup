@@ -15,7 +15,7 @@
         },
         {
             "buildParams": [
-                "$USER_HOME$/FleetProjects/local_workflow/lib/main.go"
+                "$USER_HOME$/VersionControl/local_workflow/lib/main.go"
             ],
             "goExecPath": "/usr/bin/go/bin/go",
             "name": "local_workflow",

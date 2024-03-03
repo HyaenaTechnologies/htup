@@ -4,7 +4,7 @@ load(
     "gazelle",
 )
 
-module(name = "local_workflow")
+module(name = "local_workflow_module")
 
 bazel_dep(name = "rules_go", version = "0.39.1")
 bazel_dep(name = "gazelle", version = "0.31.0")
