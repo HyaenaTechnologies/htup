@@ -1,10 +1,5 @@
 "Bazel Dependencies"
 
-load(
-    "@gazelle//:def.bzl", 
-    "gazelle",
-)
-
 module(name = "local_workflow_module")
 
 bazel_dep(
