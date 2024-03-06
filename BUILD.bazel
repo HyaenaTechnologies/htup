@@ -4,73 +4,73 @@ load(
 )
 
 go_binary(
-    deps = [
-        "//lib:local_workflow_lib",
-    ],
-    goarch = amd64
-    goos = darwin 
+    goarch = amd64,
+    goos = darwin, 
     name = "darwin_amd64",
     out = "bin/darwin/amd64/htwork_darwin_amd64",
     pure = "on",
     srcs = ["lib/**"],
-)
-
-go_binary(
     deps = [
         "//lib:local_workflow_lib",
     ],
-    goarch = arm64
-    goos = darwin 
+)
+
+go_binary(
+    goarch = arm64,
+    goos = darwin, 
     name = "darwin_arm64",
     out = "bin/darwin/arm64/htwork_darwin_arm64",
     pure = "on",
     srcs = ["lib/**"],
-)
-
-go_binary(
     deps = [
         "//lib:local_workflow_lib",
     ],
-    goarch = amd64
-    goos = linux 
+)
+
+go_binary(
+    goarch = amd64,
+    goos = linux, 
     name = "linux_amd64",
     out = "bin/linux/amd64/htwork_linux_amd64",
     pure = "on",
     srcs = ["lib/**"],
-)
-
-go_binary(
     deps = [
         "//lib:local_workflow_lib",
     ],
-    goarch = arm64
-    goos = linux 
+)
+
+go_binary(
+    goarch = arm64,
+    goos = linux, 
     name = "linux_arm64",
     out = "bin/linux/arm64/htwork_linux_arm64",
     pure = "on",
     srcs = ["lib/**"],
-)
-
-go_binary(
     deps = [
         "//lib:local_workflow_lib",
     ],
-    goarch = amd64
-    goos = windows 
+)
+
+go_binary(
+    goarch = amd64,
+    goos = windows, 
     name = "windows_amd64",
     out = "bin/windows/amd64/htwork_windows_amd64",
     pure = "on",
     srcs = ["lib/**"],
-)
-
-go_binary(
     deps = [
         "//lib:local_workflow_lib",
     ],
-    goarch = arm64
-    goos = windows 
+)
+
+go_binary(
+    goarch = arm64,
+    goos = windows, 
     name = "windows_arm64",
     out = "bin/windows/arm64/htwork_windows_arm64",
     pure = "on",
     srcs = ["lib/**"],
+    deps = [
+        "//lib:local_workflow_lib",
+    ],
 )

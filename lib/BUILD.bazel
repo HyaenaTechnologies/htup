@@ -4,15 +4,14 @@ load(
 )
 
 go_library(
-    deps = [
-        "@com_github_hashicorp_hcl_v2",
-        "@com_github_hashicorp_hil",
-    ],
     importpath = "local_workflow/lib",
     name = "local_workflow_lib",
     srcs = [
         "*.go",
         "src/**",
     ],
-    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_hashicorp_hcl_v2",
+        "@com_github_hashicorp_hil",
+    ],
 )
