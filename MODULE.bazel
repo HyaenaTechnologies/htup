@@ -11,8 +11,6 @@ bazel_dep(
     version = "0.35.0",
 )
 
-gazelle(name = "build_gazelle")
-
 go_deps = use_extension(
     "@gazelle//:extensions.bzl", 
     "go_deps",

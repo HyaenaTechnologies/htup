@@ -1,6 +1,22 @@
 load(
+    "@bazel_gazelle//:def.bzl", 
+    "gazelle",
+)
+load(
     "@io_bazel_rules_go//go:def.bzl", 
     "go_binary",
+)
+
+gazelle(name = "bazel_gazelle")
+
+gazelle(
+    name = "gazelle_update_repos",
+    args = [
+        "-from_file=go.mod",
+        "-to_macro=deps.bzl%go_dependencies",
+        "-prune",
+    ],
+    command = "update-repos",
 )
 
 go_binary(
