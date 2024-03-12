@@ -88,13 +88,13 @@ func GoFlagExecute() {
 }
 
 func GoIntegration() {
-	var goIntegrate, goIntegrateError = exec.Command(
+	var goIntegrated, goIntegratedError = exec.Command(
 		goIntegration,
 	).Output()
-	if goIntegrateError != nil {
-		log.Fatal(goIntegrateError)
+	if goIntegratedError != nil {
+		log.Fatal(goIntegratedError)
 	}
-	fmt.Print(goIntegrate)
+	fmt.Print(goIntegrated)
 }
 
 // Run Test

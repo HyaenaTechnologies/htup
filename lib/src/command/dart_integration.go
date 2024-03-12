@@ -83,13 +83,13 @@ func DartFlagExecute() {
 }
 
 func DartIntegration() {
-	var dartIntegrate, dartIntegrateError = exec.Command(
+	var dartIntegrated, dartIntegratedError = exec.Command(
 		dartIntegration,
 	).Output()
-	if dartIntegrateError != nil {
-		log.Fatal(dartIntegrateError)
+	if dartIntegratedError != nil {
+		log.Fatal(dartIntegratedError)
 	}
-	fmt.Print(dartIntegrate)
+	fmt.Print(dartIntegrated)
 }
 
 // Run Test

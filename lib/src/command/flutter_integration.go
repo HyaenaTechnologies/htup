@@ -69,13 +69,13 @@ func FlutterFlagExecute() {
 }
 
 func FlutterIntegration() {
-	var flutterIntegrate, flutterIntegrateError = exec.Command(
+	var flutterIntegrated, flutterIntegratedError = exec.Command(
 		flutterIntegration,
 	).Output()
-	if flutterIntegrateError != nil {
-		log.Fatal(flutterIntegrateError)
+	if flutterIntegratedError != nil {
+		log.Fatal(flutterIntegratedError)
 	}
-	fmt.Print(flutterIntegrate)
+	fmt.Print(flutterIntegrated)
 }
 
 // Run Test
