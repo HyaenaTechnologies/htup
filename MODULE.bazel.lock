@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 3,
-  "moduleFileHash": "062de449ea56532a651f2dcbabe7b526fc75205bd96d7e3acca2da85d6145184",
+  "moduleFileHash": "186b938e5eeabcc6a578e219a65655574f4a149c5e5643e8b84937e9a186d9f9",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -34,8 +34,7 @@
             "column": 24
           },
           "imports": {
-            "com_github_hashicorp_hcl_v2": "com_github_hashicorp_hcl_v2",
-            "com_github_hashicorp_hil": "com_github_hashicorp_hil"
+            "com_github_hashicorp_hcl_v2": "com_github_hashicorp_hcl_v2"
           },
           "devImports": [],
           "tags": [
