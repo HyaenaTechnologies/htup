@@ -49,7 +49,7 @@ func (buildPackage FlutterCommands) FlutterBuild() {
 	if flutterBuildError != nil {
 		log.Fatal(flutterBuildError)
 	}
-	fmt.Print(flutterBuild)
+	fmt.Println(flutterBuild)
 }
 
 // Flutter Command Flag Execution
@@ -75,7 +75,7 @@ func FlutterIntegration() {
 	if flutterIntegratedError != nil {
 		log.Fatal(flutterIntegratedError)
 	}
-	fmt.Print(flutterIntegrated)
+	fmt.Println(flutterIntegrated)
 }
 
 // Run Test
@@ -87,5 +87,5 @@ func (runTest FlutterCommands) FlutterTest() {
 	if flutterTestError != nil {
 		log.Fatal(flutterTestError)
 	}
-	fmt.Print(flutterTest)
+	fmt.Println(flutterTest)
 }

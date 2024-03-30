@@ -52,7 +52,7 @@ func (compileBuild DartCommands) DartCompile() {
 	if dartCompileError != nil {
 		log.Fatal(dartCompileError)
 	}
-	fmt.Print(dartCompile)
+	fmt.Println(dartCompile)
 }
 
 // Document Package
@@ -63,7 +63,7 @@ func (documentation DartCommands) DartDoc() {
 	if dartDocError != nil {
 		log.Fatal(dartDocError)
 	}
-	fmt.Print(dartDoc)
+	fmt.Println(dartDoc)
 }
 
 // Dart Command Flag Execution
@@ -89,7 +89,7 @@ func DartIntegration() {
 	if dartIntegratedError != nil {
 		log.Fatal(dartIntegratedError)
 	}
-	fmt.Print(dartIntegrated)
+	fmt.Println(dartIntegrated)
 }
 
 // Run Test
@@ -101,5 +101,5 @@ func (runTest DartCommands) DartTest() {
 	if dartTestError != nil {
 		log.Fatal(dartTestError)
 	}
-	fmt.Print(dartTest)
+	fmt.Println(dartTest)
 }

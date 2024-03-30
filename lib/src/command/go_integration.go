@@ -57,7 +57,7 @@ func (buildPackage GoCommands) GoBuild() {
 	if goBuildError != nil {
 		log.Fatal(goBuildError)
 	}
-	fmt.Print(goBuild)
+	fmt.Println(goBuild)
 }
 
 // Document Package
@@ -68,7 +68,7 @@ func (documentation GoCommands) GoDoc() {
 	if goDocError != nil {
 		log.Fatal(goDocError)
 	}
-	fmt.Print(goDoc)
+	fmt.Println(goDoc)
 }
 
 // Go Command Flag Execution
@@ -94,7 +94,7 @@ func GoIntegration() {
 	if goIntegratedError != nil {
 		log.Fatal(goIntegratedError)
 	}
-	fmt.Print(goIntegrated)
+	fmt.Println(goIntegrated)
 }
 
 // Run Test
@@ -106,5 +106,5 @@ func (runTest GoCommands) GoTest() {
 	if goTestError != nil {
 		log.Fatal(goTestError)
 	}
-	fmt.Print(goTest)
+	fmt.Println(goTest)
 }

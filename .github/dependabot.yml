@@ -16,5 +16,14 @@ updates:
       day: "saturday"
       interval: "weekly"
       time: "03:00"
+
+  - package-ecosystem: "swift"
+    commit-message:
+      prefix: "Swift Package Manager"
+    directory: "/local_workflow_swift" 
+    schedule:
+      day: "saturday"
+      interval: "weekly"
+      time: "03:00"
     
 version: 2
