@@ -11,6 +11,6 @@ go_library(
         "src/**",
     ],
     deps = [
-        "@com_github_hashicorp_hcl_v2",
+        
     ],
 )
