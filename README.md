@@ -10,12 +10,6 @@
 
 Local Workflow is an Open Source Local Workflow Tool
 
-## Local Workflows
-
-- Dart 
-- Flutter 
-- Go
-
 ## Build
 
 - [Bazel Build][Bazel]
