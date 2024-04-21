@@ -8,9 +8,9 @@ updates:
       interval: "weekly"
       time: "03:00"
     
-  - package-ecosystem: "gomod"
+  - package-ecosystem: "swift"
     commit-message:
-      prefix: "Go Modules"
+      prefix: "Swift Package Manager"
     directory: "/" 
     schedule:
       day: "saturday"
