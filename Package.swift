@@ -19,39 +19,39 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/apple/swift-argument-parser", 
-            from: "1.3.0"
+            from: "1.3.1"
         ),
         .package(
             url: "https://github.com/apple/swift-async-algorithms", 
             from: "1.0.0"
         ),
         .package(
-            url: "https://github.com/apple/swift-collections.git", 
+            url: "https://github.com/apple/swift-collections", 
             from: "1.1.0"
         ),
         .package(
-            url: "https://github.com/apple/swift-log.git", 
-            from: "1.0.0"
+            url: "https://github.com/apple/swift-log", 
+            from: "1.5.4"
         ),
         .package(
-            url: "https://github.com/apple/swift-metrics.git", 
+            url: "https://github.com/apple/swift-metrics", 
             from: "2.4.1"
         ),
         .package(
-            url: "https://github.com/apple/swift-metrics-extras.git", 
-            from: "0.1.0"
+            url: "https://github.com/apple/swift-metrics-extras", 
+            from: "0.3.1"
         ),
         .package(
             url: "https://github.com/apple/swift-numerics", 
-            from: "1.0.0"
+            from: "1.0.2"
         ),
         .package(
             url: "https://github.com/apple/swift-system", 
-            from: "1.0.0"
+            from: "1.2.1"
         ),
         .package(
-            url: "https://github.com/apple/swift-testing.git", 
-            branch: "main"
+            url: "https://github.com/apple/swift-testing", 
+            from: "0.7.0"
         ),
     ],
     targets: [
