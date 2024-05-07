@@ -4,6 +4,8 @@
 [Swift]: https://swift.org/
 [VSCode]: https://code.visualstudio.com/docs
 
+[![Swift Workflow](https://github.com/HyaenaTechnologies/local_workflow/actions/workflows/docker.yml/badge.svg)](https://github.com/HyaenaTechnologies/local_workflow/actions/workflows/docker.yml)
+
 # Local Workflow
 
 Local Workflow is an Open Source Local Workflow Tool
