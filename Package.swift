@@ -3,9 +3,6 @@ import PackageDescription
 
 let package = Package(
     name: "local_workflow",
-    platforms: [
-        .macOS(.v11),
-    ],
     products: [
         .executable(
             name: "local_workflow_executable",
