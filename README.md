@@ -1,4 +1,3 @@
-[Bazel]:https://bazel.build/reference
 [Documentation]: https://github.com/HyaenaTechnologies/local_workflow/blob/main/doc/
 [Fleet]: https://jetbrains.com/fleet/
 [Swift]: https://swift.org/
@@ -14,7 +13,6 @@ The Documentation is Located [Here][Documentation]
 
 ## Build
 
-- [Bazel Build][Bazel]
 - [JetBrains Fleet][Fleet] 
 - [Swift Language][Swift]
 - [Visual Studio Code][VSCode]
@@ -23,14 +21,6 @@ The Documentation is Located [Here][Documentation]
 git clone
 
 swift build
-```
-
-OR
-
-```shell
-git clone 
-
-bazel build
 ```
 
 ## Install
