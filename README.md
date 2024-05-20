@@ -1,9 +1,6 @@
 [Documentation]: https://github.com/HyaenaTechnologies/local_workflow/blob/main/doc/
 [Fleet]: https://jetbrains.com/fleet/
-[Swift]: https://swift.org/
 [VSCode]: https://code.visualstudio.com/docs
-
-[![Swift Workflow](https://github.com/HyaenaTechnologies/local_workflow/actions/workflows/docker.yml/badge.svg)](https://github.com/HyaenaTechnologies/local_workflow/actions/workflows/docker.yml)
 
 # Local Workflow
 
@@ -13,14 +10,13 @@ The Documentation is Located [Here][Documentation]
 
 ## Build
 
-- [JetBrains Fleet][Fleet] 
-- [Swift Language][Swift]
+- [JetBrains Fleet][Fleet]
 - [Visual Studio Code][VSCode]
 
 ```shell
 git clone
 
-swift build
+clang ./*.c
 ```
 
 ## Install
