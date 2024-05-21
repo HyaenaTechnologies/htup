@@ -16,7 +16,7 @@ The Documentation is Located [Here][Documentation]
 ```shell
 git clone
 
-clang ./*.c
+clang ./*.c ./*.cc ./*.h ./*.hh
 ```
 
 ## Install
