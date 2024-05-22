@@ -4,6 +4,14 @@
             "name": "Run Bash",
             "program": "/usr/bin/bash",
             "type": "command"
+        },
+        {
+            "args": [
+                "build"
+            ],
+            "name": "Zig Build",
+            "program": "/usr/bin/zig/zig",
+            "type": "command"
         }
     ]
 }
