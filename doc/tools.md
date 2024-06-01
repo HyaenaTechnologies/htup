@@ -1,7 +1,7 @@
 # Tools
 
-Local Workflow contains tools that attempt to replace common Linux Command Line tools.
+Local Tools contains tools that attempt to replace some common Linux Command Line tools.
 
 ## Commands
 
-- Change Directory: --chdir /path/to/directory is ~ Linux: cd
+- Change Directory: --chdir /path/to/directory

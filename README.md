@@ -1,11 +1,11 @@
-[Documentation]: https://github.com/HyaenaTechnologies/local_workflow/blob/main/doc/
+[Documentation]: https://github.com/HyaenaTechnologies/local_tools/blob/main/doc/
 [Fleet]: https://jetbrains.com/fleet/
 [VSCode]: https://code.visualstudio.com/docs
 [Zig Language]: https://ziglang.org/
 
-# Local Workflow
+# Local Tools
 
-Local Workflow is an Open Source Local Workflow Tool
+Local Tools is a set of Open Source Tools
 
 The Documentation is Located [Here][Documentation]
 
@@ -24,5 +24,5 @@ zig build
 ## Install
 
 ```shell
-echo 'export PATH="$PATH:/usr/lib/htwork"' >> ~/.profile
+echo 'export PATH="$PATH:/usr/lib/httools"' >> ~/.profile
 ```
