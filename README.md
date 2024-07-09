@@ -8,8 +8,6 @@
 
 Local Tools is a set of Open Source Tools
 
-The Documentation is Located [Here][Documentation]
-
 ## Build
 
 - [C][C Language]
