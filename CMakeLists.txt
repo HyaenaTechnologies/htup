@@ -5,5 +5,8 @@ project(local_tools)
 add_executable(
     local_tools
 
-    ./lib/update_ubuntu.c
+    ./lib/*.c
+    ./lib/*.h
+    ./lib/*.cc
+    ./lib/*.hh
 )
