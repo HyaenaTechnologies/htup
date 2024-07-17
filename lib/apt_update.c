@@ -14,13 +14,15 @@ const char *environment[2][14] = {
 // APT Update
 int main(void) {
     const int apt_update = fork();
+    const int fork_failed = -1;
+    const int fork_successful = 0;
 
-    if (apt_update == -1) {
-        perror("APT Update Failed - fork(): \n");
+    if (apt_update == fork_failed) {
+        perror("APT Update Failed - fork() = -1: \n");
         exit(1);
     };
 
-    if (apt_update == 0) {
+    if (apt_update == fork_successful) {
         execle(
             "/usr/bin/sh", 
             "sh", 
