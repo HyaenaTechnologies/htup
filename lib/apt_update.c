@@ -3,13 +3,10 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-// Null Character Arrary Pointer
-const char null_characters = (char *)0;
-
 // Path Environment Variable
 const char *path_environment[2][14] = {
     "PATH=/usr/bin",
-    null_characters
+    (const char *)0
 };
 
 // Program Termination State
@@ -34,7 +31,7 @@ int main(void) {
             "sh", 
             "-c",
             "apt update && apt -y full-upgrade",
-            null_characters, 
+            (const char *)0,
             path_environment
         );
     } else {
