@@ -1,3 +1,5 @@
+#include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/wait.h>
@@ -9,7 +11,7 @@ const char *environment[2][14] = {
     (const char *)0
 };
 
-// Update Ubuntu
+// APT Update
 int main(void) {
     const int apt_update = fork();
 
@@ -23,7 +25,7 @@ int main(void) {
             "/usr/bin/sh", 
             "sh", 
             "-c",
-            "apt update && apt -y upgrade",
+            "apt update && apt -y full-upgrade",
             (char *)0, 
             environment
         );
