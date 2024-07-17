@@ -11,6 +11,10 @@ const char *environment[2][14] = {
     (const char *)0
 };
 
+// Program Termination State
+const int fatal_error = 1;
+const int program_successful = 0;
+
 // APT Update
 int main(void) {
     const int apt_update = fork();
@@ -19,7 +23,7 @@ int main(void) {
 
     if (apt_update == fork_failed) {
         perror("APT Update Failed - fork() = -1: \n");
-        exit(1);
+        exit(fatal_error);
     };
 
     if (apt_update == fork_successful) {
@@ -35,5 +39,5 @@ int main(void) {
         waitpid(apt_update, NULL, 0);
     };
 
-    exit(0);
+    exit(program_successful);
 }
