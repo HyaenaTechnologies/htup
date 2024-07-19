@@ -9,16 +9,19 @@ const char *path_environment[2][14] = {
     (const char *)0
 };
 
-// Program Termination State
-
+// Clone Error
+const int clone_error = -1;
+// Clone Succesful
+const int clone_successful = 0;
+// Fatal Error
 const int fatal_error = 1;
+// Program Succesful
 const int program_successful = 0;
 
 // APT Update
-int main(void) {
+int aptUpdate(void) {
+    // Clone Process
     int clone_process = fork();
-    const int clone_error = -1;
-    const int clone_successful = 0;
 
     if (clone_process == clone_error) {
         perror("APT Update Failed - fork() = -1: \n");
@@ -37,6 +40,12 @@ int main(void) {
     } else {
         waitpid(clone_process, NULL, 0);
     };
+    
+    return 0;
+}
 
+// Main
+int main(void) {
+    aptUpdate();
     exit(program_successful);
 }
