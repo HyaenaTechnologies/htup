@@ -4,48 +4,52 @@
 #include <unistd.h>
 
 // Path Environment Variable
-const char *path_environment[2][14] = {
+const char *pathEnvironment[2][14] = {
     "PATH=/usr/bin",
-    (const char *)0
-};
+    (const char *)0};
+// Shell Path
+const char shellPath[12] = "/usr/bin/sh";
+// Shell Binary
+const char shellBinary[3] = "sh";
+// Shell Command Flag
+const char shellCommandFlag[3] = "-c";
 
 // Clone Error
-const int clone_error = -1;
+const int cloneError = -1;
 // Clone Succesful
-const int clone_successful = 0;
+const int cloneSuccessful = 0;
 // Fatal Error
-const int fatal_error = 1;
+const int fatalError = 1;
 // Program Succesful
-const int program_successful = 0;
+const int programSuccessful = 0;
 
 // APT Update
 int aptUpdate(void) {
     // Clone Process
-    int clone_process = fork();
+    int cloneProcess = fork();
 
-    if (clone_process == clone_error) {
+    if (cloneProcess == cloneError) {
         perror("APT Update Failed - fork() = -1: \n");
-        exit(fatal_error);
+        exit(fatalError);
     };
 
-    if (clone_process == clone_successful) {
+    if (cloneProcess == cloneSuccessful) {
         execle(
-            "/usr/bin/sh", 
-            "sh", 
-            "-c",
+            shellPath,
+            shellBinary,
+            shellCommandFlag,
             "apt update && apt -y full-upgrade",
             (const char *)0,
-            path_environment
-        );
+            pathEnvironment);
     } else {
-        waitpid(clone_process, NULL, 0);
+        waitpid(cloneProcess, NULL, 0);
     };
-    
+
     return 0;
 }
 
 // Main
 int main(void) {
     aptUpdate();
-    exit(program_successful);
+    exit(programSuccessful);
 }
