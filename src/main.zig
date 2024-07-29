@@ -1,6 +1,7 @@
-const std = @import("std");
-const writer = std.io.getStdOut().writer();
+const standard: type = @import("std");
+
+const writer = standard.io.getStdOut().writer();
 
 pub fn main() void {
-    writer.print("Local Tools\n", .{}) catch return;
+    writer.print("htup\n", .{}) catch return;
 }

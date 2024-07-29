@@ -1,12 +1,14 @@
 [C Language]: https://isocpp.org/
-[Documentation]: https://github.com/HyaenaTechnologies/local_tools/blob/main/doc/
+[Documentation]: https://github.com/HyaenaTechnologies/htup/tree/main/doc
 [Fleet]: https://jetbrains.com/fleet/
 [VSCode]: https://code.visualstudio.com/docs
 [Zig Language]: https://ziglang.org/
 
-# Local Tools
+# htup
 
-Local Tools is a set of Open Source Tools
+htup is a system update tool
+
+[Documentation][Documentation]
 
 ## Build
 
@@ -18,11 +20,17 @@ Local Tools is a set of Open Source Tools
 ```shell
 git clone
 
-zig build
+zig cc ./src/*.c -include ./bin/*.h -o ./bin/htup -target x86_64-linux
+```
+
+```shell
+git clone
+
+clang ./src/*.c -include ./bin/*.h -o ./bin/htup
 ```
 
 ## Install
 
 ```shell
-echo 'export PATH="$PATH:/usr/lib/httools"' >> ~/.profile
+echo 'export PATH="$PATH:/usr/lib/htup"' >> ~/.profile
 ```

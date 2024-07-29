@@ -1,4 +1,4 @@
-[Report]: https://github.com/HyaenaTechnologies/local_tools/security/advisories
+[Report]: https://github.com/HyaenaTechnologies/htup/security/advisories
 
 # Security Policy
 
