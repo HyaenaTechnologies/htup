@@ -23,6 +23,8 @@ git clone
 zig cc ./src/*.c -include ./bin/*.h -o ./bin/htup -target x86_64-linux
 ```
 
+OR
+
 ```shell
 git clone
 
