@@ -6,7 +6,7 @@
 const int programSuccessful = 0;
 
 // Main
-int main(void) {
+int main(int argumentNumber, char *arguments[], char *environmentVariables[]) {
     aptUpgrade();
     exit(programSuccessful);
 }
