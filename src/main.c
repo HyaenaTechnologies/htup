@@ -1,12 +1,36 @@
-#include <stdlib.h>
-#include <unistd.h>
+#include "documentation.h"
 #include "system_upgrade.h"
-
-// Program Succesful
-const int programSuccessful = 0;
+#include <stdio.h>
+#include <unistd.h>
 
 // Main
 int main(int argumentNumber, char *arguments[], char *environmentVariables[]) {
-    aptUpgrade();
-    exit(programSuccessful);
+  while ((argumentNumber > 1) && (arguments[1][0] == *"--")) {
+    switch (*arguments[1]) {
+    case * "apt":
+      aptUpgrade();
+      break;
+
+    case * "dnf":
+      dnfUpgrade();
+      break;
+
+    case * "release":
+      distributionUpgrade();
+      break;
+
+    case * "yum":
+      yumUpgrade();
+      break;
+
+    default:
+      printf("Unknown Argument: %s\n", arguments[1]);
+      usage();
+    }
+
+    ++arguments;
+    --argumentNumber;
+  }
+
+  return 0;
 }

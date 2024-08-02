@@ -20,7 +20,9 @@ htup is a system update tool
 ```shell
 git clone
 
-zig cc ./src/*.c -include ./bin/*.h -o ./bin/htup -target x86_64-linux
+zig cc ./src/*.h
+
+zig cc ./src/*.c -include-pch ./bin/*.h.pch -o ./bin/htup -target x86_64-linux
 ```
 
 OR
@@ -28,7 +30,9 @@ OR
 ```shell
 git clone
 
-clang ./src/*.c -include ./bin/*.h -o ./bin/htup
+clang ./src/*.h
+
+clang ./src/*.c -include-pch ./bin/*.h.pch -o ./bin/htup
 ```
 
 ## Install

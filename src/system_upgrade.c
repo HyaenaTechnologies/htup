@@ -1,3 +1,4 @@
+#include "program_status.h"
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,130 +20,128 @@ const char shellCommandFlag[3] = "-c";
 const int cloneError = -1;
 // Clone Succesful
 const int cloneSuccessful = 0;
-// Fatal Error
-const int fatalError = 1;
 
 // APT Upgrade
-int aptUpgrade(void) {
-    // Clone Process
-    int cloneProcess = fork();
+void aptUpgrade(void) {
+  // Clone Process
+  int cloneProcess = fork();
 
-    if (cloneProcess == cloneError) {
-        perror("APT Upgrade Failed - fork() = -1: \n");
-        exit(fatalError);
-    };
+  if (cloneProcess == cloneError) {
+    perror("APT Upgrade Failed - fork() = -1: \n");
+    exit(FATAL_ERROR);
+  };
 
-    if (cloneProcess == cloneSuccessful) {
-        execle(
-            shellPath,
-            shellBinary,
-            shellCommandFlag,
-            "apt update && apt -y full-upgrade",
-            (const char *)0,
-            pathEnvironment);
-    } else {
-        waitpid(cloneProcess, NULL, 0);
-    };
+  if (cloneProcess == cloneSuccessful) {
+    execle(
+        shellPath,
+        shellBinary,
+        shellCommandFlag,
+        "apt update && apt -y full-upgrade",
+        (const char *)0,
+        pathEnvironment);
+  } else {
+    waitpid(cloneProcess, NULL, 0);
+  };
 
-    return 0;
+  exit(PROGRAM_SUCCESSFUL);
 }
 
 // Distribution Release Upgrade
-int distributionUpgrade(void) {
-    // Clone Process
-    int cloneProcess = fork();
+void distributionUpgrade(void) {
+  // Clone Process
+  int cloneProcess = fork();
 
-    if (cloneProcess == cloneError) {
-        perror("Distribution Upgrade Failed - fork() = -1: \n");
-        exit(fatalError);
-    };
+  if (cloneProcess == cloneError) {
+    perror("Ubuntu Upgrade Failed - fork() = -1: \n");
+    exit(FATAL_ERROR);
+  };
 
-    if (cloneProcess == cloneSuccessful) {
-        execle(
-            shellPath,
-            shellBinary,
-            shellCommandFlag,
-            "do-release-upgrade",
-            (const char *)0,
-            pathEnvironment);
-    } else {
-        waitpid(cloneProcess, NULL, 0);
-    };
+  if (cloneProcess == cloneSuccessful) {
+    execle(
+        shellPath,
+        shellBinary,
+        shellCommandFlag,
+        "do-release-upgrade",
+        (const char *)0,
+        pathEnvironment);
+  } else {
+    waitpid(cloneProcess, NULL, 0);
+  };
 
-    return 0;
+  exit(PROGRAM_SUCCESSFUL);
 }
 
 // DNF Upgrade
-int dnfUpgrade(void) {
-    // Clone Process
-    int cloneProcess = fork();
+void dnfUpgrade(void) {
+  // Clone Process
+  int cloneProcess = fork();
 
-    if (cloneProcess == cloneError) {
-        perror("DNF Upgrade Failed - fork() = -1: \n");
-        exit(fatalError);
-    };
+  if (cloneProcess == cloneError) {
+    perror("DNF Upgrade Failed - fork() = -1: \n");
+    exit(FATAL_ERROR);
+  };
 
-    if (cloneProcess == cloneSuccessful) {
-        execle(
-            shellPath,
-            shellBinary,
-            shellCommandFlag,
-            "dnf -y upgrade",
-            (const char *)0,
-            pathEnvironment);
-    } else {
-        waitpid(cloneProcess, NULL, 0);
-    };
+  if (cloneProcess == cloneSuccessful) {
+    execle(
+        shellPath,
+        shellBinary,
+        shellCommandFlag,
+        "dnf --refresh -y upgrade",
+        (const char *)0,
+        pathEnvironment);
+  } else {
+    waitpid(cloneProcess, NULL, 0);
+  };
 
-    return 0;
+  exit(PROGRAM_SUCCESSFUL);
 }
 
 // DNF System Upgrade
-int dnfSystemUpgrade(void) {
-    // Clone Process
-    int cloneProcess = fork();
+void dnfSystemUpgrade(void) {
+  // Clone Process
+  int cloneProcess = fork();
 
-    if (cloneProcess == cloneError) {
-        perror("DNF System Upgrade Failed - fork() = -1: \n");
-        exit(fatalError);
-    };
+  if (cloneProcess == cloneError) {
+    perror("DNF System Upgrade Failed - fork() = -1: \n");
+    exit(FATAL_ERROR);
+  };
 
-    if (cloneProcess == cloneSuccessful) {
-        execle(
-            shellPath,
-            shellBinary,
-            shellCommandFlag,
-            "dnf system-upgrade download --releasever=40",
-            (const char *)0,
-            pathEnvironment);
-    } else {
-        waitpid(cloneProcess, NULL, 0);
-    };
+  if (cloneProcess == cloneSuccessful) {
+    execle(
+        shellPath,
+        shellBinary,
+        shellCommandFlag,
+        "dnf system-upgrade download --releasever=40",
+        (const char *)0,
+        pathEnvironment);
+  } else {
+    waitpid(cloneProcess, NULL, 0);
+  };
 
-    return 0;
+  exit(PROGRAM_SUCCESSFUL);
 }
 
 // YUM Upgrade
-int yumUpgrade(void) {
-    // Clone Process
-    int cloneProcess = fork();
+void yumUpgrade(void) {
+  // Clone Process
+  int cloneProcess = fork();
 
-    if (cloneProcess == cloneError) {
-        perror("YUM Upgrade Failed - fork() = -1: \n");
-        exit(fatalError);
-    };
+  if (cloneProcess == cloneError) {
+    perror("YUM Upgrade Failed - fork() = -1: \n");
+    exit(FATAL_ERROR);
+  };
 
-    if (cloneProcess == cloneSuccessful) {
-        execle(
-            shellPath,
-            shellBinary,
-            shellCommandFlag,
-            "yum -y upgrade",
-            (const char *)0,
-            pathEnvironment);
-    } else {
-        waitpid(cloneProcess, NULL, 0);
-    };
+  if (cloneProcess == cloneSuccessful) {
+    execle(
+        shellPath,
+        shellBinary,
+        shellCommandFlag,
+        "yum -y upgrade",
+        (const char *)0,
+        pathEnvironment);
+  } else {
+    waitpid(cloneProcess, NULL, 0);
+  };
 
-    return 0;
+  exit(PROGRAM_SUCCESSFUL);
 }

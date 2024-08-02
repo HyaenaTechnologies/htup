@@ -8,18 +8,18 @@
 #include <unistd.h>
 
 // APT Upgrade
-int aptUpgrade(void);
+void aptUpgrade(void);
 
 // Distribution Release Upgrade
-int distributionUpgrade(void);
+void distributionUpgrade(void);
 
 // DNF Upgrade
-int dnfUpgrade(void);
+void dnfUpgrade(void);
 
 // DNF System Upgrade
-int dnfSystemUpgrade(void);
+void dnfSystemUpgrade(void);
 
 // YUM Upgrade
-int yumUpgrade(void);
+void yumUpgrade(void);
 
-#endif 
+#endif
