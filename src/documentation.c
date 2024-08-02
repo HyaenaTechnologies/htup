@@ -11,18 +11,15 @@ void usage(void) {
   printf("\n");
   printf("apt              APT Full Upgrade\n");
   printf("dnf              DNF Upgrade\n");
-  printf("dnf-sys          Fedora Release Upgrade\n");
   printf("release          Ubuntu Release Upgrade\n");
   printf("yum              YUM Upgrade\n");
   printf("\n");
   printf("Options:\n");
   printf("\n");
-  printf("--version        Print Version Number\n");
-  printf("\n");
-  printf("General Options:\n");
-  printf("\n");
   printf("--env            Print Environment Variables\n");
-  printf("-h --help        Print Command Usage\n");
+  printf("--help           Print Command Usage\n");
+  printf("--sys            Fedora Release Upgrade\n");
+  printf("--version        Print Version Number\n");
 
   exit(PROGRAM_SUCCESSFUL);
 }

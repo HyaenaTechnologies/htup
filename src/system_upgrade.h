@@ -1,6 +1,7 @@
 #ifndef SYSTEM_UPGRADE_H
 #define SYSTEM_UPGRADE_H
 
+#include "program_status.h"
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
