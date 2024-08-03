@@ -39,7 +39,7 @@ clang ./src/*.c -include-pch ./src/*.pch -o ./bin/htup
 rm ./src/*.pch
 ```
 
-## RUN
+## Run
 
 ```shell
 SUDO ./bin/htup -h
