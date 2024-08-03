@@ -9,17 +9,17 @@ void usage(void) {
   printf("\n");
   printf("Commands:\n");
   printf("\n");
-  printf("apt              APT Full Upgrade\n");
-  printf("dnf              DNF Upgrade\n");
-  printf("release          Ubuntu Release Upgrade\n");
-  printf("yum              YUM Upgrade\n");
+  printf("apt             APT Full Upgrade\n");
+  printf("dnf             DNF Upgrade\n");
+  printf("release         Ubuntu Release Upgrade\n");
+  printf("sys             Fedora Release Upgrade\n");
+  printf("yum             YUM Upgrade\n");
   printf("\n");
   printf("Options:\n");
   printf("\n");
-  printf("--env            Print Environment Variables\n");
-  printf("--help           Print Command Usage\n");
-  printf("--sys            Fedora Release Upgrade\n");
-  printf("--version        Print Version Number\n");
+  printf("-e              Print Environment Variables\n");
+  printf("-h              Print Command Usage\n");
+  printf("-v              Print Version Number\n");
 
   exit(PROGRAM_SUCCESSFUL);
 }

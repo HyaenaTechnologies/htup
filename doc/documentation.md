@@ -1,17 +1,21 @@
 # Usage
 
-Usage: htup "command" "options"
+Usage: htup | command | options |
 
 Commands:
 
-apt              APT Full Upgrade
-dnf              DNF Upgrade
-release          Ubuntu Release Upgrade
-yum              YUM Upgrade
+| Commamd | Usage                  |
+|---------|------------------------|
+| apt     | APT Full Upgrade       |
+| dnf     | DNF Upgrade            |
+| release | Ubuntu Release Upgrade |
+| sys     | Fedora Release Upgrade |
+| yum     | YUM Upgrade            |
 
 Options:
 
---env            Print Environment Variables
---help           Print Command Usage
---sys            Fedora Release Upgrade
---version        Print Version Number
+| Flag | Usage                       |
+|------|-----------------------------|
+| -e   | Print Environment Variables |
+| -h   | Print Command Usage         |
+| -v   | Print Version Number        |
