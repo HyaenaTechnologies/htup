@@ -1,6 +1,6 @@
 # Usage
 
-| htup | command | options |
+| htup | command | option |
 
 ## Commands
 

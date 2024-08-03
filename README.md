@@ -6,7 +6,7 @@
 
 # htup
 
-htup is a system update tool
+htup is a System Update Tool
 
 [Documentation][Documentation]
 
