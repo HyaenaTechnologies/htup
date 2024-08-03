@@ -1,8 +1,8 @@
 # Usage
 
-Usage: htup | command | options |
+| htup | command | options |
 
-Commands:
+## Commands
 
 | Commamd | Usage                  |
 |---------|------------------------|
@@ -12,7 +12,7 @@ Commands:
 | sys     | Fedora Release Upgrade |
 | yum     | YUM Upgrade            |
 
-Options:
+## Options
 
 | Flag | Usage                       |
 |------|-----------------------------|

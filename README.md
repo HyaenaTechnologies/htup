@@ -22,7 +22,9 @@ git clone
 
 zig cc ./src/*.h
 
-zig cc ./src/*.c -include-pch ./bin/*.h.pch -o ./bin/htup -target x86_64-linux
+zig cc ./src/*.c -include-pch ./src/*.pch -o ./bin/htup -target x86_64-linux
+
+rm ./src/*.pch
 ```
 
 OR
@@ -32,11 +34,13 @@ git clone
 
 clang ./src/*.h
 
-clang ./src/*.c -include-pch ./bin/*.h.pch -o ./bin/htup
+clang ./src/*.c -include-pch ./src/*.pch -o ./bin/htup
+
+rm ./src/*.pch
 ```
 
-## Install
+## RUN
 
 ```shell
-echo 'export PATH="$PATH:/usr/lib/htup"' >> ~/.profile
+SUDO ./bin/htup -h
 ```
