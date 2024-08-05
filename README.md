@@ -1,5 +1,5 @@
 [C Language]: https://isocpp.org/
-[Documentation]: https://github.com/HyaenaTechnologies/htup/tree/main/doc
+[Documentation]: https://github.com/HyaenaTechnologies/htup/blob/main/doc/documentation.md
 [Fleet]: https://jetbrains.com/fleet/
 [VSCode]: https://code.visualstudio.com/docs
 [Zig Language]: https://ziglang.org/
@@ -42,5 +42,5 @@ rm ./src/*.pch
 ## Run
 
 ```shell
-SUDO ./bin/htup -h
+sudo ./bin/htup -h
 ```

@@ -5,7 +5,7 @@
 
 // Usage
 void usage(void) {
-  printf("Usage: htup [command] [options]\n");
+  printf("Usage: htup [command] [option]\n");
   printf("\n");
   printf("Commands:\n");
   printf("\n");
