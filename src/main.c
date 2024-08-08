@@ -6,7 +6,7 @@
 
 // Main
 int main(int argumentNumber, char *arguments[], char *environmentVariables[]) {
-  if (argumentNumber < 1) {
+  if (arguments[0]) {
     printf("Command or Option Required:\n");
     printf("\n");
     usage();
